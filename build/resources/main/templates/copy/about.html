@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://wwww.thymeleaf.org">
+
+<header th:replace="common/header :: common-header" />
+
+<body>
+
+    <div th:replace="common/navbar :: common-navbar" />
+
+    <!-- Main Jumbotron
+    ========================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="jumbotron">
+                    <h1 class="text-center" th:text="#{copy.h1.text}"></h1>
+                    <p class="lead" th:text="#{copy.p.lead}"></p>
+                </div>
+            </div>
+        </div>
+    </div><!-- /.container -->
+
+    <div class="container marketing">
+        <div class="row">
+            <!-- Three columns of text below the carousel -->
+            <div class="col-lg-4 span4">
+                <a href="https://uk.linkedin.com/in/erickrim">
+                    <img class="img-circle" data-src="holder.js/140x140" alt="140x140" src="data:image/png;base64,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"
+                         style="width: 140px; height: 140px;"/>
+                </a>
+                <h2>Heading <small class="member-title">Project lead</small></h2>
+                <div class="span4 collapse-group">
+                    <p class="collapse text-justify" th:text="#{copy.project.lead.intro}"></p>
+                    <p><a class="btn btn-primary btn-collapse" href="#" role="button" th:text="#{copy.viewdetails.button}"></a></p>
+                </div>
+            </div><!-- /.span4 -->
+
+            <div class="col-lg-4 span4">
+                <a href="https://uk.linkedin.com/in/erickrim">
+                    <img class="img-circle" data-src="holder.js/140x140" alt="140x140" src="data:image/png;base64,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"
+                         style="width: 140px; height: 140px;"/>
+                </a>
+                <h2>Heading <small class="member-title">Project lead</small></h2>
+                <div class="span4 collapse-group">
+                    <p class="collapse text-justify" th:text="#{copy.project.lead.intro}"></p>
+                    <p><a class="btn btn-primary btn-collapse" href="#" role="button" th:text="#{copy.viewdetails.button}"></a></p>
+                </div>
+            </div><!-- /.span4 -->
+
+            <div class="col-lg-4 span4">
+                <a href="https://uk.linkedin.com/in/erickrim">
+                    <img class="img-circle" data-src="holder.js/140x140" alt="140x140" src="data:image/png;base64,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"
+                         style="width: 140px; height: 140px;"/>
+                </a>
+                <h2>Heading <small class="member-title">Project lead</small></h2>
+                <div class="span4 collapse-group">
+                    <p class="collapse text-justify" th:text="#{copy.project.lead.intro}"></p>
+                    <p><a class="btn btn-primary btn-collapse" href="#" role="button" th:text="#{copy.viewdetails.button}"></a></p>
+                </div>
+            </div><!-- /.span4 -->
+
+        </div><!-- /.row -->
+
+
+        <!-- START THE FEATURETTES -->
+
+        <hr class="featurette-divider"/>
+
+        <div class="featurette">
+            <img class="featurette-image pull-right" th:src="@{/images/browser-icon-chrome.png}"/>
+            <h2 class="featurette-heading">First featurette headling. <span class="muted">It'll blow your mind.</span></h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+
+        <hr class="featurette-divider"/>
+
+        <div class="featurette">
+            <img class="featurette-image pull-left" th:src="@{/images/browser-icon-firefox.png}"/>
+            <h2 class="featurette-heading">Oh yeah, it's that good. <span class="muted">See for yourself.</span></h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+
+        <hr class="featurette-divider"/>
+
+        <div class="featurette">
+            <img class="featurette-image pull-right" th:src="@{/images/browser-icon-safari.png}"/>
+            <h2 class="featurette-heading">And lastly, this one. <span class="muted">Checkmate.</span></h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+
+        <hr class="featurette-divider"/>
+
+        <!-- /END THE FEATURETTES -->
+
+
+        <!-- FOOTER -->
+        <footer>
+            <p class="pull-right"><a href="#">Back to top</a></p>
+            <p>© 2013 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+        </footer>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <div th:replace="common/header :: before-body-script" />
+    </body>
+</html>
