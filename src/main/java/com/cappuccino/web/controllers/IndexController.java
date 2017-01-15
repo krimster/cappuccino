@@ -1,4 +1,4 @@
-package com.cappuccino.controllers;
+package com.cappuccino.web.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * Created by krime on 1/15/17.
  */
 @Controller
-public class HelloworldController {
+public class IndexController {
 
     @RequestMapping("/")
-    public String sayHello() {
+    public String home() {
         return "index";
     }
 }
