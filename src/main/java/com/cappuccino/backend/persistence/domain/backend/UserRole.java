@@ -13,8 +13,11 @@ public class UserRole implements Serializable{
     /** The Serial Version UID for Serializable classes */
     private static final long serialVersionUID = 1L;
 
-    public UserRole() {
+    public UserRole() {}
 
+    public UserRole(User user, Role role) {
+        this.user = user;
+        this.role = role;
     }
 
     @Id
