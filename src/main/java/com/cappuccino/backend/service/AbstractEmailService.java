@@ -9,7 +9,7 @@ import org.springframework.mail.SimpleMailMessage;
  */
 public abstract class AbstractEmailService implements EmailService {
 
-    @Value("$(default.to.address")
+    @Value("${default.to.address}")
     private String defaultToAddress;
 
     /**
