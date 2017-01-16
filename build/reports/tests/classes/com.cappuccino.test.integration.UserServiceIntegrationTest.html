@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.027s</div>
+<div class="counter">0.406s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,7 +79,7 @@
 </thead>
 <tr>
 <td class="success">testCreateUser</td>
-<td>0.027s</td>
+<td>0.406s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -87,12 +87,12 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>5709 [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.cappuccino.test.integration.UserServiceIntegrationTest], using SpringBootContextLoader
-5711 [Test worker] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.cappuccino.test.integration.UserServiceIntegrationTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-5712 [Test worker] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.cappuccino.test.integration.UserServiceIntegrationTest]: UserServiceIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-5720 [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.cappuccino.CappuccinoApplication for test class com.cappuccino.test.integration.UserServiceIntegrationTest
-5726 [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-5732 [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6b32b663, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@18e4f550, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2f62da69, org.springframework.test.context.support.DirtiesContextTestExecutionListener@16cc52e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7f93eace, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@40e2de19, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@796af5fe, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1e480a48, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@7e6d56d5, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@28294d17, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6c298e9, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5886d833]
+<pre>6050 [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.cappuccino.test.integration.UserServiceIntegrationTest], using SpringBootContextLoader
+6052 [Test worker] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.cappuccino.test.integration.UserServiceIntegrationTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+6052 [Test worker] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.cappuccino.test.integration.UserServiceIntegrationTest]: UserServiceIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+6057 [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.cappuccino.CappuccinoApplication for test class com.cappuccino.test.integration.UserServiceIntegrationTest
+6059 [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+6067 [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6893524f, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@50587081, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@22c5963b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@174c93d9, org.springframework.test.context.transaction.TransactionalTestExecutionListener@653faa55, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@76f0120b, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@788a36a0, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@baba033, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@13dece11, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@65c8e62b, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4c5ee304, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1aa26884]
 Hibernate: 
     select
         count(*) as col_0_0_ 
@@ -193,7 +193,7 @@ Hibernate:
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 2.7</a> at Jan 16, 2017 3:30:05 PM</p>
+<a href="http://www.gradle.org">Gradle 2.7</a> at Jan 16, 2017 5:09:04 PM</p>
 </div>
 </div>
 </body>
