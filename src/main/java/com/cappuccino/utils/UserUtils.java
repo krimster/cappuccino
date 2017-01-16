@@ -5,13 +5,13 @@ import com.cappuccino.backend.persistence.domain.backend.User;
 /**
  * Created by krime on 1/16/17.
  */
-public class UsersUtils {
+public class UserUtils {
 
 
     /**
      * Non instantiable
      */
-    private UsersUtils() {
+    private UserUtils() {
         throw new AssertionError("Non instantiable");
     }
 

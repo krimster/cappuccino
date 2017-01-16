@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.cappuccino.test.integration.UserServiceIntegrationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-01-16T15:06:49" hostname="marketplay-lm" time="0.016">
+<testsuite name="com.cappuccino.test.integration.UserServiceIntegrationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-01-16T15:30:04" hostname="marketplay-lm" time="0.027">
   <properties/>
-  <testcase name="testCreateUser" classname="com.cappuccino.test.integration.UserServiceIntegrationTest" time="0.016"/>
-  <system-out><![CDATA[5244 [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.cappuccino.test.integration.UserServiceIntegrationTest], using SpringBootContextLoader
-5245 [Test worker] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.cappuccino.test.integration.UserServiceIntegrationTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-5245 [Test worker] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.cappuccino.test.integration.UserServiceIntegrationTest]: UserServiceIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-5249 [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.cappuccino.CappuccinoApplication for test class com.cappuccino.test.integration.UserServiceIntegrationTest
-5251 [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-5254 [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@431837f1, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@704597e5, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@36608556, org.springframework.test.context.support.DirtiesContextTestExecutionListener@16134001, org.springframework.test.context.transaction.TransactionalTestExecutionListener@14364a8d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@48100d51, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@7ae86b30, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@76f73f24, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@50337155, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@18019487, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2189dd5c, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6e48d856]
+  <testcase name="testCreateUser" classname="com.cappuccino.test.integration.UserServiceIntegrationTest" time="0.027"/>
+  <system-out><![CDATA[5709 [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.cappuccino.test.integration.UserServiceIntegrationTest], using SpringBootContextLoader
+5711 [Test worker] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.cappuccino.test.integration.UserServiceIntegrationTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+5712 [Test worker] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.cappuccino.test.integration.UserServiceIntegrationTest]: UserServiceIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+5720 [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.cappuccino.CappuccinoApplication for test class com.cappuccino.test.integration.UserServiceIntegrationTest
+5726 [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+5732 [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6b32b663, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@18e4f550, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2f62da69, org.springframework.test.context.support.DirtiesContextTestExecutionListener@16cc52e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7f93eace, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@40e2de19, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@796af5fe, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1e480a48, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@7e6d56d5, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@28294d17, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6c298e9, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5886d833]
 Hibernate: 
     select
         count(*) as col_0_0_ 
@@ -21,9 +21,10 @@ Hibernate:
         role0_.id as id1_1_1_,
         role0_.name as name2_1_1_,
         userroles1_.role_id as role_id2_3_3_,
-        userroles1_.user_id as user_id1_3_3_,
-        userroles1_.user_id as user_id1_3_0_,
-        userroles1_.role_id as role_id2_3_0_ 
+        userroles1_.id as id1_3_3_,
+        userroles1_.id as id1_3_0_,
+        userroles1_.role_id as role_id2_3_0_,
+        userroles1_.user_id as user_id3_3_0_ 
     from
         role role0_ 
     left outer join
@@ -46,44 +47,11 @@ Hibernate:
         user0_.profile_image_url as profile10_2_1_,
         user0_.stripe_customer_id as stripe_11_2_1_,
         user0_.username as usernam12_2_1_,
-        userroles1_.user_id as user_id1_3_3_,
-        userroles1_.role_id as role_id2_3_3_,
-        userroles1_.user_id as user_id1_3_0_,
-        userroles1_.role_id as role_id2_3_0_ 
-    from
-        user user0_ 
-    left outer join
-        user_role userroles1_ 
-            on user0_.id=userroles1_.user_id 
-    where
-        user0_.id=?
-Hibernate: 
-    select
-        plan0_.id as id1_0_0_,
-        plan0_.name as name2_0_0_ 
-    from
-        plan plan0_ 
-    where
-        plan0_.id=?
-Hibernate: 
-    select
-        user0_.id as id1_2_1_,
-        user0_.country as country2_2_1_,
-        user0_.description as descript3_2_1_,
-        user0_.email as email4_2_1_,
-        user0_.enabled as enabled5_2_1_,
-        user0_.first_name as first_na6_2_1_,
-        user0_.last_name as last_nam7_2_1_,
-        user0_.password as password8_2_1_,
-        user0_.phone_number as phone_nu9_2_1_,
-        user0_.plan_id as plan_id13_2_1_,
-        user0_.profile_image_url as profile10_2_1_,
-        user0_.stripe_customer_id as stripe_11_2_1_,
-        user0_.username as usernam12_2_1_,
-        userroles1_.user_id as user_id1_3_3_,
-        userroles1_.role_id as role_id2_3_3_,
-        userroles1_.user_id as user_id1_3_0_,
-        userroles1_.role_id as role_id2_3_0_ 
+        userroles1_.user_id as user_id3_3_3_,
+        userroles1_.id as id1_3_3_,
+        userroles1_.id as id1_3_0_,
+        userroles1_.role_id as role_id2_3_0_,
+        userroles1_.user_id as user_id3_3_0_ 
     from
         user user0_ 
     left outer join
@@ -115,12 +83,20 @@ Hibernate:
     values
         (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
 Hibernate: 
+    select
+        role_.id,
+        role_.name as name2_1_ 
+    from
+        role role_ 
+    where
+        role_.id=?
+Hibernate: 
     insert 
     into
         user_role
-        (user_id, role_id) 
+        (id, role_id, user_id) 
     values
-        (?, ?)
+        (null, ?, ?)
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

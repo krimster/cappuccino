@@ -6,7 +6,7 @@ import com.cappuccino.backend.persistence.domain.backend.UserRole;
 import com.cappuccino.backend.service.UserService;
 import com.cappuccino.enums.PlansEnum;
 import com.cappuccino.enums.RolesEnum;
-import com.cappuccino.utils.UsersUtils;
+import com.cappuccino.utils.UserUtils;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -32,7 +32,7 @@ public class UserServiceIntegrationTest {
     public void testCreateUser() throws Exception {
 
         Set<UserRole> userRoles = new HashSet<>();
-        User basicUser = UsersUtils.createBasicUser();
+        User basicUser = UserUtils.createBasicUser();
         userRoles.add(new UserRole(basicUser, new Role(RolesEnum.BASIC)));
 
         User user = userService.createUser(basicUser, PlansEnum.BASIC, userRoles);
