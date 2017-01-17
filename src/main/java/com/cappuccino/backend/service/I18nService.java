@@ -1,4 +1,4 @@
-package com.cappuccino.web.i18n;
+package com.cappuccino.backend.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

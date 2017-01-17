@@ -1,6 +1,9 @@
 package com.cappuccino.utils;
 
 import com.cappuccino.backend.persistence.domain.backend.User;
+import com.cappuccino.web.controllers.ForgotMyPasswordController;
+
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * Created by krime on 1/16/17.
@@ -37,5 +40,24 @@ public class UserUtils {
         user.setProfileImageUrl("http://www.blabla.com/basicuser");
 
         return user;
+    }
+
+    public static String createPasswordResetUrl(HttpServletRequest request, long userId, String token) {
+
+        String passwordResetUrl =
+
+                request.getScheme() +
+                        "://" +
+                        request.getServerName() +
+                        ":" +
+                        request.getServerPort() +
+                        request.getContextPath() +
+                        ForgotMyPasswordController.CHANGE_PASSWORD_PATH +
+                        "?id=" +
+                        userId +
+                        "&token=" +
+                        token;
+
+        return passwordResetUrl;
     }
 }

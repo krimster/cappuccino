@@ -1,6 +1,6 @@
 package com.cappuccino;
 
-import com.cappuccino.web.i18n.I18nService;
+import com.cappuccino.backend.service.I18nService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
