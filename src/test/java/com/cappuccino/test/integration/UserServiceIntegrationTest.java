@@ -1,23 +1,15 @@
 package com.cappuccino.test.integration;
 
-import com.cappuccino.backend.persistence.domain.backend.Role;
 import com.cappuccino.backend.persistence.domain.backend.User;
-import com.cappuccino.backend.persistence.domain.backend.UserRole;
-import com.cappuccino.backend.service.UserService;
-import com.cappuccino.enums.PlansEnum;
-import com.cappuccino.enums.RolesEnum;
-import com.cappuccino.utils.UserUtils;
 import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TestName;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.UUID;
 
 /**
  * UserService Integration Test
@@ -25,25 +17,33 @@ import java.util.Set;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest
-public class UserServiceIntegrationTest {
-
-    @Autowired
-    private UserService userService;
+public class UserServiceIntegrationTest extends AbstractServiceIntegrationTest {
 
     @Rule public TestName testName = new TestName();
 
     @Test
     public void testCreateUser() throws Exception {
 
-        String userName = testName.getMethodName();
-        String email = testName.getMethodName() + "@cappuccino.com";
-
-        Set<UserRole> userRoles = new HashSet<>();
-        User basicUser = UserUtils.createBasicUser(userName, email);
-        userRoles.add(new UserRole(basicUser, new Role(RolesEnum.BASIC)));
-
-        User user = userService.createUser(basicUser, PlansEnum.BASIC, userRoles);
+        User user = createUser(testName);
         Assert.assertNotNull(user);
         Assert.assertNotNull(user.getId());
     }
+
+
+//    @Test
+//    public void testUpdateUserPassword() throws Exception {
+//
+//        User user = createUser(testName);
+//        Assert.assertNotNull(user);
+//        Assert.assertNotNull(user.getId());
+//
+//        String oldPassword = user.getPassword();
+//
+//        userService.updateUserPassword(user.getId(), UUID.randomUUID().toString());
+//
+//        user = userService.findUserByEmail(user.getEmail());
+//        Assert.assertNotEquals(oldPassword, user.getPassword());
+//
+//    }
+
 }

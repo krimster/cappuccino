@@ -7,10 +7,13 @@ import com.cappuccino.backend.persistence.repositories.PlanRepository;
 import com.cappuccino.backend.persistence.repositories.RoleRepository;
 import com.cappuccino.backend.persistence.repositories.UserRepository;
 import com.cappuccino.enums.PlansEnum;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import sun.reflect.generics.reflectiveObjects.LazyReflectiveObjectGenerator;
 
 import java.util.Set;
 
@@ -20,6 +23,9 @@ import java.util.Set;
 @Service
 @Transactional(readOnly = true)
 public class UserService {
+
+    /** The application logger */
+    private static final Logger LOG = LoggerFactory.getLogger(UserService.class);
 
     @Autowired
     private RoleRepository roleRepository;
@@ -56,6 +62,22 @@ public class UserService {
         user = userRepository.save(user);
 
         return user;
+    }
+
+    /**
+     * Returns a user for the given email or null if a user could not be found.
+     * @param email The email associated to the user to find.
+     * @return a user for the given email or null if a user could not be found.
+     */
+    public User findUserByEmail(String email) {
+        return userRepository.findByEmail(email);
+    }
+
+    @Transactional
+    public void updateUserPassword(long userId, String password) {
+        password = passwordEncoder.encode(password);
+        userRepository.updateUserPassword(userId,password);
+        LOG.debug("Password updated successfully for user id {}", userId);
     }
 
 
