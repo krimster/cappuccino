@@ -2,6 +2,7 @@ package com.cappuccino.utils;
 
 import com.cappuccino.backend.persistence.domain.backend.User;
 import com.cappuccino.web.controllers.ForgotMyPasswordController;
+import com.cappuccino.web.domain.frontend.BasicAccountPayload;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -59,5 +60,21 @@ public class UserUtils {
                         token;
 
         return passwordResetUrl;
+    }
+
+    public static <T extends BasicAccountPayload> User fromWebUserToDomainUser(T frontEndPayload) {
+
+        User user = new User();
+        user.setUsername(frontEndPayload.getUsername());
+        user.setPassword(frontEndPayload.getPassword());
+        user.setFirstName(frontEndPayload.getFirstName());
+        user.setLastName(frontEndPayload.getLastName());
+        user.setEmail(frontEndPayload.getEmail());
+        user.setPhoneNumber(frontEndPayload.getPhoneNumber());
+        user.setCountry(frontEndPayload.getCountry());
+        user.setEnabled(true);
+        user.setDescription(frontEndPayload.getDescription());
+
+        return user;
     }
 }
