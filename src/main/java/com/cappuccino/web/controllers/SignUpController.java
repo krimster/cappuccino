@@ -5,6 +5,7 @@ import com.cappuccino.backend.persistence.domain.backend.Role;
 import com.cappuccino.backend.persistence.domain.backend.User;
 import com.cappuccino.backend.persistence.domain.backend.UserRole;
 import com.cappuccino.backend.service.PlanService;
+import com.cappuccino.backend.service.S3Service;
 import com.cappuccino.backend.service.UserService;
 import com.cappuccino.enums.PlansEnum;
 import com.cappuccino.enums.RolesEnum;
@@ -45,6 +46,9 @@ public class SignupController {
 
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private S3Service s3Service;
 
     public static final String SIGNUP_URL_MAPPING = "/signup";
 
@@ -110,7 +114,7 @@ public class SignupController {
             return SUBSCRIPTION_VIEW_NAME;
         }
 
-        // There are certian info that the user doesn't set, such as profile image url, Stripe customer id,
+        // There are certain info that the user doesn't set, such as profile image url, Stripe customer id,
         // plans and roles
         LOG.debug("Transforming user payload into user domain object");
         User user = UserUtils.fromWebUserToDomainUser(payload);
@@ -118,11 +122,12 @@ public class SignupController {
         // Stores the profile image on Amazon S3 and stores the URL in the user's record
         if (file != null && !file.isEmpty()) {
 
-            String profileImageUrl = null;
+            String profileImageUrl = s3Service.storeProfileImage(file, payload.getUsername());
             if (profileImageUrl != null) {
                 user.setProfileImageUrl(profileImageUrl);
+                LOG.info("Profile url image is {}", profileImageUrl);
             } else {
-                LOG.warn("There was a problem uploading the profile image to S3. The user;s profile" +
+                LOG.warn("There was a problem uploading the profile image to S3. The user's profile" +
                 " be created without image");
             }
         }
