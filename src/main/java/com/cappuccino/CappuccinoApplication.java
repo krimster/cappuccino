@@ -3,6 +3,7 @@ package com.cappuccino;
 import com.cappuccino.backend.persistence.domain.backend.Role;
 import com.cappuccino.backend.persistence.domain.backend.User;
 import com.cappuccino.backend.persistence.domain.backend.UserRole;
+import com.cappuccino.backend.service.PlanService;
 import com.cappuccino.backend.service.UserService;
 import com.cappuccino.enums.PlansEnum;
 import com.cappuccino.enums.RolesEnum;
@@ -30,6 +31,9 @@ public class CappuccinoApplication implements CommandLineRunner {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private PlanService planService;
+
     @Value("${webmaster.username}")
     private String webmasterUsername;
 
@@ -46,6 +50,10 @@ public class CappuccinoApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+
+        LOG.info("Creating Basic and Pro plans in the database...");
+        planService.createPlan(PlansEnum.BASIC.getId());
+        planService.createPlan(PlansEnum.PRO.getId());
 
         User user = UserUtils.createBasicUser(webmasterUsername, webmasterEmail);
         user.setPassword(webmasterPassword);
