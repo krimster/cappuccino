@@ -1,57 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.cappuccino.test.unit.UserUtilsUnitTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-01-19T15:38:02" hostname="marketplay-lm" time="0.718">
+<testsuite name="com.cappuccino.test.unit.UserUtilsUnitTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-01-19T16:02:36" hostname="marketplay-lm" time="0.63">
   <properties/>
-  <testcase name="mapWebUserToDomainUser" classname="com.cappuccino.test.unit.UserUtilsUnitTest" time="0.718"/>
-  <system-out><![CDATA[595  [Test worker] INFO  o.s.c.s.ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5c65990e: startup date [Thu Jan 19 15:38:02 GMT 2017]; root of context hierarchy
-639  [Test worker] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/podam-config.xml]
-763  [Test worker] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/podam-integration-config.xml]
-883  [Test worker] INFO  o.s.b.f.c.PropertiesFactoryBean - Loading properties file from URL [jar:file:/Users/krime/.gradle/caches/modules-2/files-2.1/org.springframework.integration/spring-integration-core/4.3.6.RELEASE/39f1a7f39d6fdc6b7bcb17bd8706f4a298abff36/spring-integration-core-4.3.6.RELEASE.jar!/META-INF/spring.integration.default.properties]
-890  [Test worker] INFO  o.s.i.config.IntegrationRegistrar - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
-961  [Test worker] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
-963  [Test worker] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
-1058 [Test worker] INFO  o.s.b.f.c.PropertiesFactoryBean - Loading properties file from URL [jar:file:/Users/krime/.gradle/caches/modules-2/files-2.1/org.springframework.integration/spring-integration-core/4.3.6.RELEASE/39f1a7f39d6fdc6b7bcb17bd8706f4a298abff36/spring-integration-core-4.3.6.RELEASE.jar!/META-INF/spring.integration.default.properties]
-1102 [Test worker] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService  'taskScheduler'
-1198 [Test worker] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 0
-1199 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {router} as a subscriber to the 'podamInputChannel' channel
-1199 [Test worker] INFO  o.s.i.channel.DirectChannel - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@5c65990e.podamInputChannel' has 1 subscriber(s).
-1199 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - started org.springframework.integration.config.ConsumerEndpointFactoryBean#0
-1199 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {service-activator} as a subscriber to the 'booleanChannel' channel
-1199 [Test worker] INFO  o.s.i.channel.DirectChannel - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@5c65990e.booleanChannel' has 1 subscriber(s).
-1199 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - started org.springframework.integration.config.ConsumerEndpointFactoryBean#1
-1200 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {service-activator} as a subscriber to the 'byteChannel' channel
-1200 [Test worker] INFO  o.s.i.channel.DirectChannel - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@5c65990e.byteChannel' has 1 subscriber(s).
-1200 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - started org.springframework.integration.config.ConsumerEndpointFactoryBean#2
-1200 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {service-activator} as a subscriber to the 'charChannel' channel
-1200 [Test worker] INFO  o.s.i.channel.DirectChannel - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@5c65990e.charChannel' has 1 subscriber(s).
-1200 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - started org.springframework.integration.config.ConsumerEndpointFactoryBean#3
-1200 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {service-activator} as a subscriber to the 'shortChannel' channel
-1201 [Test worker] INFO  o.s.i.channel.DirectChannel - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@5c65990e.shortChannel' has 1 subscriber(s).
-1201 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - started org.springframework.integration.config.ConsumerEndpointFactoryBean#4
-1201 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {service-activator} as a subscriber to the 'intChannel' channel
-1201 [Test worker] INFO  o.s.i.channel.DirectChannel - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@5c65990e.intChannel' has 1 subscriber(s).
-1201 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - started org.springframework.integration.config.ConsumerEndpointFactoryBean#5
-1201 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {service-activator} as a subscriber to the 'longChannel' channel
-1202 [Test worker] INFO  o.s.i.channel.DirectChannel - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@5c65990e.longChannel' has 1 subscriber(s).
-1202 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - started org.springframework.integration.config.ConsumerEndpointFactoryBean#6
-1202 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {service-activator} as a subscriber to the 'floatChannel' channel
-1202 [Test worker] INFO  o.s.i.channel.DirectChannel - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@5c65990e.floatChannel' has 1 subscriber(s).
-1202 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - started org.springframework.integration.config.ConsumerEndpointFactoryBean#7
-1202 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {service-activator} as a subscriber to the 'doubleChannel' channel
-1203 [Test worker] INFO  o.s.i.channel.DirectChannel - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@5c65990e.doubleChannel' has 1 subscriber(s).
-1203 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - started org.springframework.integration.config.ConsumerEndpointFactoryBean#8
-1203 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {service-activator} as a subscriber to the 'stringChannel' channel
-1203 [Test worker] INFO  o.s.i.channel.DirectChannel - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@5c65990e.stringChannel' has 1 subscriber(s).
-1204 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - started org.springframework.integration.config.ConsumerEndpointFactoryBean#9
-1204 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {service-activator} as a subscriber to the 'enumChannel' channel
-1204 [Test worker] INFO  o.s.i.channel.DirectChannel - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@5c65990e.enumChannel' has 1 subscriber(s).
-1204 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - started org.springframework.integration.config.ConsumerEndpointFactoryBean#10
-1205 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {service-activator} as a subscriber to the 'genericTypeChannel' channel
-1205 [Test worker] INFO  o.s.i.channel.DirectChannel - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@5c65990e.genericTypeChannel' has 1 subscriber(s).
-1205 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - started org.springframework.integration.config.ConsumerEndpointFactoryBean#11
-1206 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
-1206 [Test worker] INFO  o.s.i.c.PublishSubscribeChannel - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@5c65990e.errorChannel' has 1 subscriber(s).
-1206 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - started _org.springframework.integration.errorLogger
-1265 [Test worker] WARN  u.c.j.p.t.TypeManufacturerUtil - Please, registrer AttributeStratergy for custom constraint @org.hibernate.validator.constraints.Email(flags=[], groups=[], regexp=.*, message={org.hibernate.validator.constraints.Email.message}, payload=[]), in DataProviderStrategy! Value will be left to null
+  <testcase name="mapWebUserToDomainUser" classname="com.cappuccino.test.unit.UserUtilsUnitTest" time="0.63"/>
+  <system-out><![CDATA[481  [Test worker] INFO  o.s.c.s.ClassPathXmlApplicationContext - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5d8cfd3: startup date [Thu Jan 19 16:02:36 GMT 2017]; root of context hierarchy
+512  [Test worker] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/podam-config.xml]
+581  [Test worker] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/podam-integration-config.xml]
+691  [Test worker] INFO  o.s.b.f.c.PropertiesFactoryBean - Loading properties file from URL [jar:file:/Users/krime/.gradle/caches/modules-2/files-2.1/org.springframework.integration/spring-integration-core/4.3.6.RELEASE/39f1a7f39d6fdc6b7bcb17bd8706f4a298abff36/spring-integration-core-4.3.6.RELEASE.jar!/META-INF/spring.integration.default.properties]
+697  [Test worker] INFO  o.s.i.config.IntegrationRegistrar - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+771  [Test worker] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+774  [Test worker] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+863  [Test worker] INFO  o.s.b.f.c.PropertiesFactoryBean - Loading properties file from URL [jar:file:/Users/krime/.gradle/caches/modules-2/files-2.1/org.springframework.integration/spring-integration-core/4.3.6.RELEASE/39f1a7f39d6fdc6b7bcb17bd8706f4a298abff36/spring-integration-core-4.3.6.RELEASE.jar!/META-INF/spring.integration.default.properties]
+914  [Test worker] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService  'taskScheduler'
+1028 [Test worker] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 0
+1029 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {router} as a subscriber to the 'podamInputChannel' channel
+1029 [Test worker] INFO  o.s.i.channel.DirectChannel - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@5d8cfd3.podamInputChannel' has 1 subscriber(s).
+1029 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - started org.springframework.integration.config.ConsumerEndpointFactoryBean#0
+1029 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {service-activator} as a subscriber to the 'booleanChannel' channel
+1029 [Test worker] INFO  o.s.i.channel.DirectChannel - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@5d8cfd3.booleanChannel' has 1 subscriber(s).
+1029 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - started org.springframework.integration.config.ConsumerEndpointFactoryBean#1
+1029 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {service-activator} as a subscriber to the 'byteChannel' channel
+1030 [Test worker] INFO  o.s.i.channel.DirectChannel - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@5d8cfd3.byteChannel' has 1 subscriber(s).
+1030 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - started org.springframework.integration.config.ConsumerEndpointFactoryBean#2
+1030 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {service-activator} as a subscriber to the 'charChannel' channel
+1030 [Test worker] INFO  o.s.i.channel.DirectChannel - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@5d8cfd3.charChannel' has 1 subscriber(s).
+1030 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - started org.springframework.integration.config.ConsumerEndpointFactoryBean#3
+1030 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {service-activator} as a subscriber to the 'shortChannel' channel
+1030 [Test worker] INFO  o.s.i.channel.DirectChannel - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@5d8cfd3.shortChannel' has 1 subscriber(s).
+1030 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - started org.springframework.integration.config.ConsumerEndpointFactoryBean#4
+1030 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {service-activator} as a subscriber to the 'intChannel' channel
+1030 [Test worker] INFO  o.s.i.channel.DirectChannel - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@5d8cfd3.intChannel' has 1 subscriber(s).
+1031 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - started org.springframework.integration.config.ConsumerEndpointFactoryBean#5
+1031 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {service-activator} as a subscriber to the 'longChannel' channel
+1031 [Test worker] INFO  o.s.i.channel.DirectChannel - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@5d8cfd3.longChannel' has 1 subscriber(s).
+1031 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - started org.springframework.integration.config.ConsumerEndpointFactoryBean#6
+1031 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {service-activator} as a subscriber to the 'floatChannel' channel
+1031 [Test worker] INFO  o.s.i.channel.DirectChannel - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@5d8cfd3.floatChannel' has 1 subscriber(s).
+1031 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - started org.springframework.integration.config.ConsumerEndpointFactoryBean#7
+1031 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {service-activator} as a subscriber to the 'doubleChannel' channel
+1032 [Test worker] INFO  o.s.i.channel.DirectChannel - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@5d8cfd3.doubleChannel' has 1 subscriber(s).
+1032 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - started org.springframework.integration.config.ConsumerEndpointFactoryBean#8
+1032 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {service-activator} as a subscriber to the 'stringChannel' channel
+1032 [Test worker] INFO  o.s.i.channel.DirectChannel - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@5d8cfd3.stringChannel' has 1 subscriber(s).
+1032 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - started org.springframework.integration.config.ConsumerEndpointFactoryBean#9
+1032 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {service-activator} as a subscriber to the 'enumChannel' channel
+1032 [Test worker] INFO  o.s.i.channel.DirectChannel - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@5d8cfd3.enumChannel' has 1 subscriber(s).
+1032 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - started org.springframework.integration.config.ConsumerEndpointFactoryBean#10
+1032 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {service-activator} as a subscriber to the 'genericTypeChannel' channel
+1032 [Test worker] INFO  o.s.i.channel.DirectChannel - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@5d8cfd3.genericTypeChannel' has 1 subscriber(s).
+1032 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - started org.springframework.integration.config.ConsumerEndpointFactoryBean#11
+1033 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+1033 [Test worker] INFO  o.s.i.c.PublishSubscribeChannel - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@5d8cfd3.errorChannel' has 1 subscriber(s).
+1033 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - started _org.springframework.integration.errorLogger
+1072 [Test worker] WARN  u.c.j.p.t.TypeManufacturerUtil - Please, registrer AttributeStratergy for custom constraint @org.hibernate.validator.constraints.Email(flags=[], groups=[], regexp=.*, message={org.hibernate.validator.constraints.Email.message}, payload=[]), in DataProviderStrategy! Value will be left to null
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
