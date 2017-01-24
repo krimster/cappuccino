@@ -6,9 +6,11 @@ import com.cappuccino.backend.persistence.domain.backend.User;
 import com.cappuccino.backend.persistence.domain.backend.UserRole;
 import com.cappuccino.backend.service.PlanService;
 import com.cappuccino.backend.service.S3Service;
+import com.cappuccino.backend.service.StripeService;
 import com.cappuccino.backend.service.UserService;
 import com.cappuccino.enums.PlansEnum;
 import com.cappuccino.enums.RolesEnum;
+import com.cappuccino.utils.StripeUtils;
 import com.cappuccino.utils.UserUtils;
 import com.cappuccino.web.domain.frontend.BasicAccountPayload;
 import com.cappuccino.web.domain.frontend.ProAccountPayload;
@@ -28,10 +30,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.validation.Valid;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Created by krime on 1/19/17.
@@ -50,6 +49,9 @@ public class SignupController {
 
     @Autowired
     private S3Service s3Service;
+
+    @Autowired
+    private StripeService stripeService;
 
     public static final String SIGNUP_URL_MAPPING = "/signup";
 
@@ -165,6 +167,20 @@ public class SignupController {
                 model.addAttribute(ERROR_MESSAGE_KEY, "One or more credit card details is null or empty");
                 return SUBSCRIPTION_VIEW_NAME;
             }
+
+            // If the user has selected the pro account, create the Stripe customer to store the stripe customer id
+            // in the db
+            Map<String, Object> stripeTokenParams = StripeUtils.extractTokenParamsFromSignupPayload(payload);
+
+            Map<String, Object> customerParams = new HashMap<>();
+            customerParams.put("description", "Cappuccino customer name " + payload.getUsername());
+            customerParams.put("email", payload.getEmail());
+            customerParams.put("plan", selectedPlan.getId());
+            LOG.info("Subscribing the customer to plan {}", selectedPlan.getName());
+            String stripeCustomerId = stripeService.createCustomer(stripeTokenParams, customerParams);
+            LOG.info("Username : {} has been subscribed to Stripe", payload.getUsername());
+
+            user.setStripeCustomerId(stripeCustomerId);
 
             registeredUser = userService.createUser(user, PlansEnum.PRO, roles);
             LOG.debug(payload.toString());

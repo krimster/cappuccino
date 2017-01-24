@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.cappuccino.test.integration.StripeIntegrationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-01-24T10:18:48" hostname="marketplay-lm" time="2.746">
+  <properties/>
+  <testcase name="createStripeCustomer" classname="com.cappuccino.test.integration.StripeIntegrationTest" time="2.746"/>
+  <system-out><![CDATA[439  [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.cappuccino.test.integration.StripeIntegrationTest], using SpringBootContextLoader
+442  [Test worker] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.cappuccino.test.integration.StripeIntegrationTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+445  [Test worker] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.cappuccino.test.integration.StripeIntegrationTest]: StripeIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+449  [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.cappuccino.CappuccinoApplication for test class com.cappuccino.test.integration.StripeIntegrationTest
+454  [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+457  [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@39693ddb, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1cfb248e, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@47e95a82, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7679bd7e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@68ed18f, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@43945a84, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4e24353e, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@750de3c9, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@57f564e, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@645e7c1f, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@bbc286f, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1135817a]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.4.3.RELEASE)
+
+920  [Test worker] INFO  c.c.t.i.StripeIntegrationTest - Starting StripeIntegrationTest on marketplay-lm with PID 14142 (started by krime in /Users/krime/Desktop/Traininig/Spring/cappuccino)
+920  [Test worker] DEBUG c.c.t.i.StripeIntegrationTest - Running with Spring Boot v1.4.3.RELEASE, Spring v4.3.5.RELEASE
+920  [Test worker] INFO  c.c.t.i.StripeIntegrationTest - The following profiles are active: dev
+1263 [Test worker] INFO  o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@3f00bd68: startup date [Tue Jan 24 10:18:40 GMT 2017]; root of context hierarchy
+2336 [Test worker] INFO  o.s.b.f.c.PropertiesFactoryBean - Loading properties file from URL [jar:file:/Users/krime/.gradle/caches/modules-2/files-2.1/org.springframework.integration/spring-integration-core/4.3.6.RELEASE/39f1a7f39d6fdc6b7bcb17bd8706f4a298abff36/spring-integration-core-4.3.6.RELEASE.jar!/META-INF/spring.integration.default.properties]
+2340 [Test worker] INFO  o.s.i.config.IntegrationRegistrar - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2636 [Test worker] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2644 [Test worker] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2791 [Test worker] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c75b2a96] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2895 [Test worker] INFO  o.s.b.f.c.PropertiesFactoryBean - Loading properties file from URL [jar:file:/Users/krime/.gradle/caches/modules-2/files-2.1/org.springframework.integration/spring-integration-core/4.3.6.RELEASE/39f1a7f39d6fdc6b7bcb17bd8706f4a298abff36/spring-integration-core-4.3.6.RELEASE.jar!/META-INF/spring.integration.default.properties]
+2895 [Test worker] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'integrationGlobalProperties' of type [class org.springframework.beans.factory.config.PropertiesFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2896 [Test worker] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'integrationGlobalProperties' of type [class java.util.Properties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+3579 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+Hibernate: 
+    drop table password_reset_token if exists
+Hibernate: 
+    drop table plan if exists
+Hibernate: 
+    drop table role if exists
+Hibernate: 
+    drop table user if exists
+Hibernate: 
+    drop table user_role if exists
+Hibernate: 
+    create table password_reset_token (
+        id bigint generated by default as identity,
+        expiry_date timestamp,
+        token varchar(255),
+        user_id bigint,
+        primary key (id)
+    )
+Hibernate: 
+    create table plan (
+        id integer not null,
+        name varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table role (
+        id integer not null,
+        name varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table user (
+        id bigint generated by default as identity,
+        country varchar(255),
+        description varchar(500),
+        email varchar(255),
+        enabled boolean not null,
+        first_name varchar(255),
+        last_name varchar(255),
+        password varchar(255),
+        phone_number varchar(255),
+        profile_image_url varchar(255),
+        stripe_customer_id varchar(255),
+        username varchar(255),
+        plan_id integer,
+        primary key (id)
+    )
+Hibernate: 
+    create table user_role (
+        id bigint generated by default as identity,
+        role_id integer,
+        user_id bigint,
+        primary key (id)
+    )
+Hibernate: 
+    alter table password_reset_token 
+        add constraint UK_g0guo4k8krgpwuagos61oc06j unique (token)
+Hibernate: 
+    alter table user 
+        add constraint UK_ob8kqyqqgmefl0aco34akdtpe unique (email)
+Hibernate: 
+    alter table user 
+        add constraint UK_sb8bbouer5wak8vyiiy4pf2bx unique (username)
+Hibernate: 
+    alter table password_reset_token 
+        add constraint FK5lwtbncug84d4ero33v3cfxvl 
+        foreign key (user_id) 
+        references user
+Hibernate: 
+    alter table user 
+        add constraint FKeos0c7nc1mvicjcxbkxxolohc 
+        foreign key (plan_id) 
+        references plan
+Hibernate: 
+    alter table user_role 
+        add constraint FKa68196081fvovjhkek5m97n3y 
+        foreign key (role_id) 
+        references role
+Hibernate: 
+    alter table user_role 
+        add constraint FK859n2jvi8ivhui0rl0esws6o 
+        foreign key (user_id) 
+        references user
+4771 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+6730 [Test worker] DEBUG o.s.s.c.a.a.c.AuthenticationConfiguration$EnableGlobalAuthenticationAutowiredConfigurer - Eagerly initializing {securityConfig=com.cappuccino.config.SecurityConfig$$EnhancerBySpringCGLIB$$7c92e89b@499e4451}
+6864 [Test worker] DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression 'permitAll', for ExactUrl [processUrl='/login?error']
+6865 [Test worker] DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression 'permitAll', for ExactUrl [processUrl='/login']
+6865 [Test worker] DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression 'permitAll', for ExactUrl [processUrl='/login']
+6865 [Test worker] DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression 'permitAll', for OrRequestMatcher [requestMatchers=[Ant [pattern='/logout', GET], Ant [pattern='/logout', POST], Ant [pattern='/logout', PUT], Ant [pattern='/logout', DELETE]]]
+6865 [Test worker] DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression 'permitAll', for ExactUrl [processUrl='/login?logout']
+6866 [Test worker] DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression 'permitAll', for Ant [pattern='/webjars/**']
+6866 [Test worker] DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression 'permitAll', for Ant [pattern='/css/**']
+6866 [Test worker] DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression 'permitAll', for Ant [pattern='/js/**']
+6866 [Test worker] DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression 'permitAll', for Ant [pattern='/images/**']
+6866 [Test worker] DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression 'permitAll', for Ant [pattern='/']
+6866 [Test worker] DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression 'permitAll', for Ant [pattern='/about/**']
+6867 [Test worker] DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression 'permitAll', for Ant [pattern='/contact/**']
+6867 [Test worker] DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression 'permitAll', for Ant [pattern='/error/**/*']
+6867 [Test worker] DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression 'permitAll', for Ant [pattern='/console/**']
+6867 [Test worker] DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression 'permitAll', for Ant [pattern='/forgotmypassword']
+6867 [Test worker] DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression 'permitAll', for Ant [pattern='/changeuserpassword']
+6867 [Test worker] DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression 'permitAll', for Ant [pattern='/signup']
+6867 [Test worker] DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression 'authenticated', for org.springframework.security.web.util.matcher.AnyRequestMatcher@1
+6881 [Test worker] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Validated configuration attributes
+6882 [Test worker] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Validated configuration attributes
+6900 [Test worker] INFO  o.s.s.w.DefaultSecurityFilterChain - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@447c1ff8, org.springframework.security.web.context.SecurityContextPersistenceFilter@233b9b42, org.springframework.security.web.header.HeaderWriterFilter@7d810893, org.springframework.security.web.authentication.logout.LogoutFilter@3bd0a82, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4dddda92, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@54ba60cb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4467d9d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3ad538, org.springframework.security.web.session.SessionManagementFilter@6ec0070a, org.springframework.security.web.access.ExceptionTranslationFilter@224912e3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@534f8976]
+7180 [Test worker] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@3f00bd68: startup date [Tue Jan 24 10:18:40 GMT 2017]; root of context hierarchy
+7254 [Test worker] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/contact],methods=[GET]}" onto public java.lang.String com.cappuccino.web.controllers.ContactController.contactGet(org.springframework.ui.ModelMap)
+7255 [Test worker] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/contact],methods=[POST]}" onto public java.lang.String com.cappuccino.web.controllers.ContactController.contactPost(com.cappuccino.web.domain.frontend.FeedbackPojo)
+7255 [Test worker] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/about]}" onto public java.lang.String com.cappuccino.web.controllers.CopyController.about()
+7256 [Test worker] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/forgotmypassword],methods=[GET]}" onto public java.lang.String com.cappuccino.web.controllers.ForgotMyPasswordController.forgotPasswordGet()
+7256 [Test worker] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/forgotmypassword],methods=[POST]}" onto public java.lang.String com.cappuccino.web.controllers.ForgotMyPasswordController.forgotPasswordPost(javax.servlet.http.HttpServletRequest,java.lang.String,org.springframework.ui.ModelMap)
+7257 [Test worker] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/changeuserpassword],methods=[GET]}" onto public java.lang.String com.cappuccino.web.controllers.ForgotMyPasswordController.changeUserPasswordGet(long,java.lang.String,java.util.Locale,org.springframework.ui.ModelMap)
+7257 [Test worker] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/changeuserpassword],methods=[POST]}" onto public java.lang.String com.cappuccino.web.controllers.ForgotMyPasswordController.changeUserPasswordPost(long,java.lang.String,org.springframework.ui.ModelMap)
+7257 [Test worker] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/]}" onto public java.lang.String com.cappuccino.web.controllers.IndexController.home()
+7258 [Test worker] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login]}" onto public java.lang.String com.cappuccino.web.controllers.LoginController.login()
+7258 [Test worker] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/payload]}" onto public java.lang.String com.cappuccino.web.controllers.PayloadController.payload()
+7258 [Test worker] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/signup],methods=[GET]}" onto public java.lang.String com.cappuccino.web.controllers.SignupController.signupGet(int,org.springframework.ui.ModelMap)
+7259 [Test worker] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/signup],methods=[POST]}" onto public java.lang.String com.cappuccino.web.controllers.SignupController.signUpPost(int,org.springframework.web.multipart.MultipartFile,com.cappuccino.web.domain.frontend.ProAccountPayload,org.springframework.ui.ModelMap) throws java.lang.Exception
+7263 [Test worker] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+7264 [Test worker] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+7321 [Test worker] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+7321 [Test worker] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+7374 [Test worker] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+8206 [Test worker] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService  'taskScheduler'
+8468 [Test worker] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 0
+8469 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+8469 [Test worker] INFO  o.s.i.c.PublishSubscribeChannel - Channel 'application:dev:-1.errorChannel' has 1 subscriber(s).
+8469 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - started _org.springframework.integration.errorLogger
+8483 [Test worker] INFO  c.cappuccino.CappuccinoApplication - Creating Basic and Pro plans in the database...
+Hibernate: 
+    select
+        plan0_.id as id1_1_0_,
+        plan0_.name as name2_1_0_ 
+    from
+        plan plan0_ 
+    where
+        plan0_.id=?
+Hibernate: 
+    insert 
+    into
+        plan
+        (name, id) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        plan0_.id as id1_1_0_,
+        plan0_.name as name2_1_0_ 
+    from
+        plan plan0_ 
+    where
+        plan0_.id=?
+Hibernate: 
+    insert 
+    into
+        plan
+        (name, id) 
+    values
+        (?, ?)
+8582 [Test worker] DEBUG c.cappuccino.CappuccinoApplication - Creating user with username admin
+Hibernate: 
+    select
+        count(*) as col_0_0_ 
+    from
+        plan plan0_ 
+    where
+        plan0_.id=? 
+        and 1=1
+Hibernate: 
+    select
+        role0_.id as id1_2_1_,
+        role0_.name as name2_2_1_,
+        userroles1_.role_id as role_id2_4_3_,
+        userroles1_.id as id1_4_3_,
+        userroles1_.id as id1_4_0_,
+        userroles1_.role_id as role_id2_4_0_,
+        userroles1_.user_id as user_id3_4_0_ 
+    from
+        role role0_ 
+    left outer join
+        user_role userroles1_ 
+            on role0_.id=userroles1_.role_id 
+    where
+        role0_.id=?
+Hibernate: 
+    insert 
+    into
+        role
+        (name, id) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        plan_.id,
+        plan_.name as name2_1_ 
+    from
+        plan plan_ 
+    where
+        plan_.id=?
+Hibernate: 
+    insert 
+    into
+        user
+        (id, country, description, email, enabled, first_name, last_name, password, phone_number, plan_id, profile_image_url, stripe_customer_id, username) 
+    values
+        (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        role_.id,
+        role_.name as name2_2_ 
+    from
+        role role_ 
+    where
+        role_.id=?
+Hibernate: 
+    insert 
+    into
+        user_role
+        (id, role_id, user_id) 
+    values
+        (null, ?, ?)
+9153 [Test worker] INFO  c.cappuccino.CappuccinoApplication - User admin created
+9156 [Test worker] INFO  c.c.t.i.StripeIntegrationTest - Started StripeIntegrationTest in 8.619 seconds (JVM running for 9.809)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
