@@ -57,8 +57,9 @@ dependencies {
 	// https://mvnrepository.com/artifact/com.stripe/stripe-java
 	compile group: 'com.stripe', name: 'stripe-java', version: '1.40.0'
 
+    runtime 'mysql:mysql-connector-java:5.1.36'
 
-	//logback
+    //logback
 	compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.1.7'
 
 	testCompile('org.springframework.boot:spring-boot-starter-test')
