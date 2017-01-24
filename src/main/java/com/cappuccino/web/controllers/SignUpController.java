@@ -28,8 +28,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
+import java.time.Clock;
+import java.time.LocalDate;
 import java.util.*;
 
 /**
@@ -53,8 +57,6 @@ public class SignupController {
     @Autowired
     private StripeService stripeService;
 
-    private String name;
-
     public static final String SIGNUP_URL_MAPPING = "/signup";
 
     public static final String PAYLOAD_MODEL_KEY_NAME = "payload";
@@ -68,6 +70,8 @@ public class SignupController {
     public static final String SIGNED_UP_MESSAGE_KEY = "signedUp";
 
     public static final String ERROR_MESSAGE_KEY = "message";
+
+    private static final String GENERIC_ERROR_VIEW_NAME = "error/genericError";
 
 
     @RequestMapping(value = SIGNUP_URL_MAPPING, method = RequestMethod.GET)
@@ -200,6 +204,19 @@ public class SignupController {
         return SUBSCRIPTION_VIEW_NAME;
     }
 
+    public ModelAndView signupException(HttpServletRequest request, Exception exception) {
+
+        LOG.error("Request {} raised exception {}", request.getRequestURL(), exception);
+
+        ModelAndView mav = new ModelAndView();
+        mav.addObject("exception", exception);
+        mav.addObject("url", request.getRequestURL());
+        mav.addObject("timestamp", LocalDate.now(Clock.systemUTC()));
+        mav.setViewName(GENERIC_ERROR_VIEW_NAME);
+        return mav;
+    }
+
+    //-------------> private methods
     /**
      * Checks if the username.email are duplicates and sets error flags in the model.
      * Side effect : the method might set attributes on Model
