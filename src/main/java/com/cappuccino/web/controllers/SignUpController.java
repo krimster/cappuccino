@@ -53,6 +53,8 @@ public class SignupController {
     @Autowired
     private StripeService stripeService;
 
+    private String name;
+
     public static final String SIGNUP_URL_MAPPING = "/signup";
 
     public static final String PAYLOAD_MODEL_KEY_NAME = "payload";
